@@ -35,6 +35,7 @@ export default function PizzaList() {
         {pizzas.map((pizza) => {
           return (
             <li key={pizza.id}>
+              {user.favorites.includes(pizza.id) ? "♥" : "♡"}{" "}
               <strong>{pizza.name}</strong> (bought {pizza.bought} times)
               <br />({pizza.description})
             </li>
