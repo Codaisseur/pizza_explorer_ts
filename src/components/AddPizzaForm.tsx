@@ -1,7 +1,13 @@
 // src/components/AddPizzaForm.tsx
 import React, { useState } from "react";
+import { Dispatch } from "redux";
+import { useDispatch } from "react-redux";
+
+import { Action } from "../store/types";
 
 export default function AddPizzaForm() {
+  const dispatch = useDispatch<Dispatch<Action>>();
+
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
 
@@ -11,11 +17,18 @@ export default function AddPizzaForm() {
         // to make sure that the form does not redirect (which is normal browser behavior)
         event.preventDefault();
 
-        console.log("new pizza:", name, description);
+        dispatch({
+          type: "add_pizza",
+          payload: {
+            id: Date.now(), // bad, but good enough for now ;)
+            name,
+            description,
+            bought: 0,
+          },
+        });
 
-        // TODO:
-        // - dispatch the ADD_PIZZA action
-        // - clear the input fields
+        setName("");
+        setDescription("");
       }}
     >
       <h2>Add a new pizza</h2>
