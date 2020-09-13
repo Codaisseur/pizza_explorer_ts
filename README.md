@@ -3,3 +3,4 @@
 3. Added Redux devtools integration
 4. Added a PizzaList component stub
 5. Example usage of `useSelector`
+6. Added a selector that counts the pizzas
