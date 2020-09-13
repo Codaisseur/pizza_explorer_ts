@@ -21,4 +21,5 @@ export type Action =
       type: "add_pizza";
       payload: Pizza;
     }
+  | { type: "toggle_favorite"; payload: number }
   | { type: "...more_to_come..." };
