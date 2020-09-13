@@ -11,3 +11,4 @@
 11. Storing a list of favorites (array of ids) in the user object in Redux state
 12. Displaying whether each pizza is a favorite or not
 13. Dispatching `toggle_favorite` actions on clicking the pizza's heart icon
+14. Toggling pizza favoriteness in the reducer

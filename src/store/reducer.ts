@@ -49,6 +49,24 @@ export function reducer(state = initialState, action: Action) {
         ],
       };
     }
+    case "toggle_favorite": {
+      const updatedFavorites = state.user.favorites;
+      let i = state.user.favorites.indexOf(action.payload);
+      if (i >= 0) {
+        // => already a favorite, let's remove it
+        updatedFavorites.splice(i, 1);
+      } else {
+        updatedFavorites.push(action.payload);
+      }
+
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          favorites: updatedFavorites,
+        },
+      };
+    }
     default: {
       return state;
     }
