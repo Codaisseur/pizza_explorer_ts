@@ -10,9 +10,14 @@ const selectNumPizzas = (reduxState: State) => {
   return reduxState.pizzas.length;
 };
 
+const selectPizzas = (reduxState: State) => {
+  return reduxState.pizzas;
+};
+
 export default function PizzaList() {
   const user = useSelector(selectUser);
   const numPizzas = useSelector(selectNumPizzas);
+  const pizzas = useSelector(selectPizzas);
 
   return (
     <div>
@@ -21,7 +26,16 @@ export default function PizzaList() {
         Welcome back, <strong>{user.name}</strong>! Your favorite pizzas (
         {numPizzas}):
       </p>
-      <p>TODO: the list of pizzas</p>
+      <ul>
+        {pizzas.map((pizza) => {
+          return (
+            <li key={pizza.id}>
+              <strong>{pizza.name}</strong> (bought {pizza.bought} times)
+              <br />({pizza.description})
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }

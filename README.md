@@ -4,3 +4,4 @@
 4. Added a PizzaList component stub
 5. Example usage of `useSelector`
 6. Added a selector that counts the pizzas
+7. Selecting all pizzas and rendering them with .map
