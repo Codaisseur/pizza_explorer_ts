@@ -11,7 +11,12 @@ const selectNumPizzas = (reduxState: State) => {
 };
 
 const selectPizzas = (reduxState: State) => {
-  return reduxState.pizzas;
+  // note: first making a shallow copy of the array,
+  //  because .sort is a mutating array function,
+  //  and we don't want to change/mutate the store's state
+  return [...reduxState.pizzas].sort((a, b) => {
+    return b.bought - a.bought;
+  });
 };
 
 export default function PizzaList() {
