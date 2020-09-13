@@ -2,3 +2,4 @@
 2. Added Redux store, connected with React-Redux
 3. Added Redux devtools integration
 4. Added a PizzaList component stub
+5. Example usage of `useSelector`
