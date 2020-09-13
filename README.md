@@ -6,3 +6,4 @@
 6. Added a selector that counts the pizzas
 7. Selecting all pizzas and rendering them with .map
 8. Sorting the pizzas in the selector
+9. Added a form to be used to add new pizzas
