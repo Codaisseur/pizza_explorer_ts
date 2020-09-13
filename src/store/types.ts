@@ -1,6 +1,7 @@
 export type User = {
   name: string;
   email: string;
+  favorites: number[];
 };
 
 export type Pizza = {

@@ -5,6 +5,7 @@ const initialState: State = {
   user: {
     name: "Kelley",
     email: "kelley@codaisseur.copm",
+    favorites: [161235, 357311],
   },
   pizzas: [
     {

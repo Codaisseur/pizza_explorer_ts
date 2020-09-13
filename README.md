@@ -8,3 +8,4 @@
 8. Sorting the pizzas in the selector
 9. Added a form to be used to add new pizzas
 10. Using `useDispatch`, dispatching an action when the form is submitted
+11. Storing a list of favorites (array of ids) in the user object in Redux state
